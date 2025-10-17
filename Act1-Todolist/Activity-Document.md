@@ -181,23 +181,23 @@ Before running the project, ensure you have the following installed:
 
 **GET /tasks - Retrieve All Tasks**
 
-![GET Tasks](../images/gettasks.png)
-*Response showing all tasks retrieved from the database*
+![GET Tasks](images/gettasks.png)
+
 
 **POST /tasks - Create New Task**
 
-![POST Task](../images/posttasks.png)
-*Creating a new task with title, description, priority, and due date*
+![POST Task](images/posttasks.png)
+
 
 **PATCH /tasks/:id - Update Task**
 
-![PATCH Task](../images/patchtasks.png)
-*Updating an existing task's information*
+![PATCH Task](images/patchtasks.png)
+
 
 **DELETE /tasks/:id - Delete Task**
 
-![DELETE Task](../images/deltasks.png)
-*Deleting a task from the database*
+![DELETE Task](images/deltasks.png)
+
 
 ---
 
