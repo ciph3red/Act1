@@ -1,97 +1,76 @@
-# Task Manager Application
+# To-do List Application
 
-A comprehensive full-stack task management application built with React.js frontend and NestJS backend, featuring TypeScript and MySQL database integration.
-
----
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Project Structure](#project-structure)
-- [Development](#development)
-- [Troubleshooting](#troubleshooting)
-- [Deployment](#deployment)
+A full-stack task management system built with **React.js**, **NestJS**, **TypeScript**, and **MySQL**. Features complete CRUD operations, priority-based task organization, and real-time statistics tracking.
 
 ---
 
-## 🎯 Overview
+## System Overview
 
-The Task Manager is a comprehensive full-stack web application that allows users to efficiently organize and manage their daily tasks. The application provides a modern, intuitive interface for creating, viewing, updating, and deleting tasks with additional features like priority levels, due dates, and completion tracking.
+### Application Purpose
+A web-based task management system that enables users to create, organize, and track daily tasks with advanced features including priority levels, due dates, completion status, and filtering capabilities.
 
-### What the App Does:
-- **Task Management**: Create new tasks with titles, descriptions, priority levels, and due dates
-- **Task Organization**: Filter tasks by status (All, Active, Completed) for better organization
-- **Task Operations**: Complete CRUD operations - Create, Read, Update, and Delete tasks
-- **Status Tracking**: Mark tasks as complete or incomplete with visual indicators
-- **Priority System**: Assign priority levels (Low, Medium, High) with color-coded badges
-- **Due Date Management**: Set and track due dates for tasks
-- **Real-time Statistics**: View live counts of total, active, and completed tasks
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+### Key Capabilities
+- **CRUD Operations**: Full Create, Read, Update, Delete functionality for tasks
+- **Task Attributes**: Title, description, priority (Low/Medium/High), due date, completion status
+- **Organization**: Filter tasks by status (All, Active, Completed)
+- **Statistics**: Real-time tracking of total, active, and completed tasks
+- **Responsive UI**: Mobile-first design with modern aesthetics
 
 ---
 
-## ✨ Features
+## Technology Stack
 
-### Core Functionality
-- ✅ **Create Tasks**: Add new tasks with comprehensive details (title, description, priority, due date)
-- ✅ **View Tasks**: Display all tasks in an organized, filterable list
-- ✅ **Update Tasks**: Edit existing task information
-- ✅ **Delete Tasks**: Remove tasks with confirmation
-- ✅ **Toggle Completion**: Mark tasks as complete or incomplete
+### Frontend Layer
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| React.js | 18.x | UI component framework |
+| TypeScript | 4.x | Type-safe development |
+| Axios | 1.x | HTTP client for API calls |
+| CSS3 | - | Styling and animations |
+| date-fns | 2.x | Date formatting |
 
-### Advanced Features
-- ✅ **Priority Levels**: Assign and display task priorities (Low, Medium, High) with color coding
-- ✅ **Due Dates**: Set and track task deadlines
-- ✅ **Filtering**: View tasks by completion status (All, Active, Completed)
-- ✅ **Real-time Statistics**: Live updates of total, active, and completed task counts
-- ✅ **Responsive Design**: Mobile-friendly interface that works on all devices
-- ✅ **Form Validation**: Client and server-side validation
-- ✅ **Error Handling**: Graceful error management and user feedback
+### Backend Layer
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| NestJS | 10.x | Server-side framework |
+| Node.js | 16+ | Runtime environment |
+| TypeScript | 4.x | Type-safe backend code |
+| TypeORM | 0.3.x | Database ORM |
+| class-validator | 0.14.x | DTO validation |
 
-### Technical Features
-- ✅ **RESTful API**: Well-structured backend API with full CRUD operations
-- ✅ **Type Safety**: Full TypeScript implementation across frontend and backend
-- ✅ **Database Integration**: Persistent data storage with MySQL and TypeORM
-- ✅ **CORS Support**: Cross-origin resource sharing enabled
-- ✅ **Modern UI**: Beautiful, intuitive user interface with gradients and animations
+### Database Layer
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| MySQL | 8.0+ | Relational database |
+| TypeORM | 0.3.x | Database migrations & queries |
 
----
-
-## 🛠️ Technology Stack
-
-### Frontend
-- **React.js 18** - Modern JavaScript library for building user interfaces
-- **TypeScript** - Type-safe JavaScript for better development experience
-- **CSS3** - Modern styling with gradients, animations, and responsive design
-- **Axios** - HTTP client for API communication
-- **date-fns** - Date formatting and manipulation library
-
-### Backend
-- **NestJS** - Progressive Node.js framework for building scalable server-side applications
-- **TypeScript** - Strongly typed programming language
-- **Node.js** - JavaScript runtime environment
-- **TypeORM** - Object-Relational Mapping for database operations
-- **MySQL** - Relational database management system
-- **class-validator** - Decorator-based validation for DTOs
+### Architecture Pattern
+- **Design**: RESTful API architecture
+- **Communication**: Client-server model with HTTP/JSON
+- **Data Flow**: React → Axios → NestJS → TypeORM → MySQL
+- **Validation**: Client-side (React forms) + Server-side (class-validator)
 
 ---
 
-## 📦 Prerequisites
+## System Requirements
 
-Before running the project, ensure you have the following installed:
-- **Node.js** (version 16 or higher)
-- **MySQL Server** (version 8.0 or higher)
-- **npm** or **yarn** package manager
+### Software Prerequisites
+```
+Node.js      : v16.0.0 or higher
+MySQL Server : v8.0.0 or higher
+npm          : v7.0.0 or higher (comes with Node.js)
+```
+
+### Port Requirements
+```
+Frontend  : Port 3000 (React development server)
+Backend   : Port 3001 (NestJS API server)
+Database  : Port 3306 (MySQL default)
+```
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Step 1: Database Setup
 
@@ -136,7 +115,7 @@ Before running the project, ensure you have the following installed:
    The backend API will be available at `http://localhost:3001`
    
    **Success Indicators**:
-   - Console shows "Task Manager Backend running on port 3001"
+   - Console shows "To-do List Backend running on port 3001"
    - Database tables are automatically created
    - No error messages in the console
 
@@ -163,57 +142,75 @@ Before running the project, ensure you have the following installed:
 
 ---
 
-## 📖 Usage
+## Application Usage
 
-### Getting Started
+### User Interface Operations
 
-1. **Access the Application**:
-   
-   Open your web browser and go to `http://localhost:3000`
+**Access Application**: Navigate to `http://localhost:3000`
 
-2. **Add Your First Task**:
-   - Click the "Add Task" button
-   - Fill in the task details (title is required)
-   - Select priority level and due date (optional)
-   - Click "Add Task" to save
+**Task Creation**:
+1. Click "Add Task" button
+2. Required field: Task title
+3. Optional fields: Description, Priority (Low/Medium/High), Due Date
+4. Submit to persist to database
 
-3. **Manage Tasks**:
-   - **Complete Tasks**: Click the checkbox next to any task
-   - **Edit Tasks**: Click the edit button (✏️) to modify task details
-   - **Delete Tasks**: Click the delete button (🗑️) to remove tasks
-   - **Filter Tasks**: Use the filter tabs (All, Active, Completed)
+**Task Management**:
+- **Mark Complete**: Toggle checkbox (PATCH `/tasks/:id/toggle`)
+- **Edit Task**: Click edit icon (✏️) to modify task data
+- **Delete Task**: Click delete icon (🗑️) to remove from database
+- **Filter View**: Select All / Active / Completed tabs
 
-4. **View Statistics**:
-   - Monitor task counts in the statistics bar
-   - Track your productivity with completion rates
+**Real-time Statistics**: Dashboard displays live counts of total, active, and completed tasks
 
 ---
 
-## 🔌 API Endpoints
+## API Specification
 
-### Task Operations
+### REST Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/tasks` | Retrieve all tasks |
-| GET | `/tasks/:id` | Retrieve specific task by ID |
-| POST | `/tasks` | Create new task |
-| PATCH | `/tasks/:id` | Update existing task |
-| PATCH | `/tasks/:id/toggle` | Toggle task completion status |
-| DELETE | `/tasks/:id` | Delete task |
+| HTTP Method | Endpoint | Request Body | Response | Description |
+|-------------|----------|--------------|----------|-------------|
+| GET | `/tasks` | - | Task[] | Retrieve all tasks from database |
+| GET | `/tasks/:id` | - | Task | Retrieve single task by ID |
+| POST | `/tasks` | CreateTaskDto | Task | Create new task record |
+| PATCH | `/tasks/:id` | UpdateTaskDto | Task | Update task attributes |
+| PATCH | `/tasks/:id/toggle` | - | Task | Toggle completion status |
+| DELETE | `/tasks/:id` | - | void | Delete task from database |
 
-### Task Schema
+### Data Transfer Objects (DTOs)
 
+**CreateTaskDto**:
 ```typescript
 {
-  id: number;
-  title: string;
+  title: string;           // Required, min 1 char
+  description?: string;    // Optional
+  priority?: 'low' | 'medium' | 'high';  // Optional, defaults to 'low'
+  dueDate?: string;        // Optional, ISO date string
+}
+```
+
+**UpdateTaskDto**:
+```typescript
+{
+  title?: string;
   description?: string;
-  completed: boolean;
-  priority?: string; // 'low' | 'medium' | 'high'
+  completed?: boolean;
+  priority?: 'low' | 'medium' | 'high';
   dueDate?: string;
-  createdAt: string;
-  updatedAt: string;
+}
+```
+
+**Task Entity Schema** (Database Model):
+```typescript
+{
+  id: number;              // Auto-generated primary key
+  title: string;           // Task title
+  description?: string;    // Task details
+  completed: boolean;      // Status flag (default: false)
+  priority: string;        // Priority level (default: 'low')
+  dueDate?: Date;         // Target completion date
+  createdAt: Date;        // Auto-generated timestamp
+  updatedAt: Date;        // Auto-updated timestamp
 }
 ```
 
@@ -251,7 +248,7 @@ Before running the project, ensure you have the following installed:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Act1-Todolist/
@@ -295,32 +292,37 @@ Act1-Todolist/
 
 ---
 
-## 💻 Development
+## Development Commands
 
-### Backend Development Commands
-
+### Backend (NestJS)
 ```bash
 cd backend
-npm run start:dev   # Start in development mode with hot reload
-npm run build       # Build for production
-npm run start:prod  # Start in production mode
-npm run lint        # Lint code
-npm run test        # Run tests
+npm run start:dev   # Development mode with hot-reload (watch mode)
+npm run build       # Compile TypeScript to JavaScript (dist/)
+npm run start:prod  # Production mode (requires build first)
+npm run lint        # ESLint code analysis
+npm run test        # Run Jest unit tests
 ```
 
-### Frontend Development Commands
-
+### Frontend (React)
 ```bash
 cd frontend
-npm start           # Start development server
-npm run build       # Build for production
-npm test            # Run tests
-npm run eject       # Eject from Create React App (one-way operation)
+npm start           # Development server with hot-reload (port 3000)
+npm run build       # Production build (optimized bundle)
+npm test            # Run Jest/React Testing Library tests
+```
+
+### Database Operations
+```bash
+# TypeORM migrations (if synchronize: false)
+npm run migration:generate -- -n MigrationName
+npm run migration:run
+npm run migration:revert
 ```
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues and Solutions
 
@@ -365,7 +367,7 @@ npm run eject       # Eject from Create React App (one-way operation)
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 ### Backend Deployment
 
@@ -411,36 +413,40 @@ npm run eject       # Eject from Create React App (one-way operation)
 
 ---
 
-## 🎓 Educational Objectives
+## Technical Learning Outcomes
 
-This project demonstrates:
-- **Full-stack Development**: Complete application from database to user interface
-- **Modern Web Technologies**: Current industry-standard tools and frameworks
-- **API Design**: RESTful service architecture and best practices
-- **Database Integration**: ORM usage and relational database design
-- **Type Safety**: TypeScript implementation across the entire stack
-- **User Experience**: Modern UI/UX design principles and responsive design
-- **Error Handling**: Robust error management strategies
-- **Code Organization**: Modular architecture and separation of concerns
+### Full-Stack Architecture
+- **Client-Server Communication**: RESTful API design and implementation
+- **State Management**: React hooks (useState, useEffect) for component state
+- **Data Persistence**: MySQL relational database with TypeORM migrations
+- **Type Safety**: End-to-end TypeScript across frontend and backend
 
----
+### Backend Engineering (NestJS)
+- **Modular Architecture**: Modules, Controllers, Services separation
+- **Dependency Injection**: NestJS IoC container pattern
+- **Data Validation**: class-validator decorators for DTO validation
+- **ORM Integration**: TypeORM entities, repositories, and query builders
+- **CORS Configuration**: Cross-origin resource sharing setup
 
-## 📝 License
+### Frontend Engineering (React)
+- **Component Architecture**: Functional components with TypeScript interfaces
+- **HTTP Client**: Axios interceptors and error handling
+- **Form Handling**: Controlled components with validation
+- **Conditional Rendering**: Dynamic UI based on application state
+- **CSS Styling**: Responsive design with flexbox and grid
 
-This project is for educational purposes.
-
----
-
-## 🤝 Contributing
-
-This is an educational project. Feel free to fork and modify for learning purposes.
-
----
-
-## 📧 Contact
-
-For questions or feedback about this project, please open an issue on the repository.
+### Database Design
+- **Schema**: Task entity with relationships and constraints
+- **Indexes**: Primary keys and auto-increment IDs
+- **Timestamps**: Automatic createdAt/updatedAt tracking
+- **Data Types**: VARCHAR, TEXT, BOOLEAN, DATETIME mapping
 
 ---
 
-**Built with ❤️ using React.js and NestJS**
+## License
+
+Educational and demonstration purposes only.
+
+---
+
+**System Architecture**: React.js (Frontend) ↔ NestJS API (Backend) ↔ MySQL (Database)
