@@ -1,7 +1,7 @@
-Group Members:
-Dawal, Giullian Marco 
-Bantolin, Emmhan Russell
-Baluyot, Ruel
-Dominguez, Dindo
-Pineda, Gidion
+# Group Members:<br>
+Dawal, Giullian Marco <br>
+Bantolin, Emmhan Russell<br>
+Baluyot, Ruel<br>
+Dominguez, Dindo<br>
+Pineda, Gidion<br>
 Egana, Justin Mykel
